@@ -1,4 +1,4 @@
-import type { ContainerInfo } from "~/dockstat-types/docker";
+import type { ContainerInfo } from "~/typings/docker";
 
 interface Plugin {
 	name: string;
