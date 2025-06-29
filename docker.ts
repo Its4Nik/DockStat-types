@@ -38,4 +38,23 @@ interface HostStats {
 	images: number;
 }
 
-export type { HostStats, ContainerInfo, DockerHost };
+type DockerStatsEvent =
+	| {
+			type: "stats";
+			id: string;
+			hostId: number;
+			name: string;
+			image: string;
+			status: string;
+			state: string;
+			cpuUsage: number;
+			memoryUsage: number;
+	  }
+	| {
+			type: "error";
+			hostId: number;
+			containerId?: string;
+			error: string;
+	  };
+
+export type { DockerStatsEvent, HostStats, ContainerInfo, DockerHost };

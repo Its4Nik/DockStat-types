@@ -1,4 +1,4 @@
 export interface StandardRes {
-  success: boolean;
-  message: string;
+	success: boolean;
+	message: string;
 }
