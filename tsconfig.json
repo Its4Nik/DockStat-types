@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "paths": {
+      // This feels so fckn wrong
+      "~/typings/*": ["./*"]
+    },
+    "target": "ES2021",
+    "module": "ES2022",
+    "moduleResolution": "bundler"
+  }
+}

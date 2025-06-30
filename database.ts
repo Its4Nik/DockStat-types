@@ -1,4 +1,4 @@
-import { ComposeSpec } from "./docker-compose";
+//import { ComposeSpec } from "./docker-compose";
 
 interface config {
   keep_data_for: number;

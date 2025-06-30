@@ -1,4 +1,4 @@
-import type { ContainerInfo } from "./docker";
+import type { ContainerInfo } from "~/typings/docker";
 
 interface PluginInfo {
   status: "active" | "inactive";
