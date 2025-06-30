@@ -2,7 +2,7 @@ interface stackSocketMessage {
   timestamp: Date;
   message?: string;
   type?: "stack-progress" | "stack-error" | "stack-status" | "stack-removed";
-  data?: stackSocketData;
+  data: stackSocketData;
 }
 
 interface stackSocketData {

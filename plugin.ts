@@ -1,7 +1,7 @@
-import type { ContainerInfo } from "~/typings/docker";
+import type { ContainerInfo } from "./docker";
 
 interface PluginInfo {
-  status: string;
+  status: "active" | "inactive";
   onContainerStart?: boolean;
   onContainerStop?: boolean;
   onContainerExit?: boolean;
@@ -21,6 +21,7 @@ interface PluginInfo {
 
 interface Plugin {
   name: string;
+  version: string;
 
   // Container lifecycle hooks
   onContainerStart?: (containerInfo: ContainerInfo) => void;
