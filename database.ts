@@ -22,4 +22,14 @@ interface log_message {
   line: number;
 }
 
-export type { config, stacks_config, log_message };
+interface container_stats {
+  id: string;
+  hostId: number;
+  name: string;
+  image: string;
+  status: string;
+  state: string;
+  cpu_usage: number;
+  memory_usage: number;
+}
+export type { container_stats, config, stacks_config, log_message };

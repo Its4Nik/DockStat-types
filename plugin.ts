@@ -1,22 +1,26 @@
 import type { ContainerInfo } from "~/typings/docker";
 
 interface PluginInfo {
+  name: string;
   status: "active" | "inactive";
-  onContainerStart?: boolean;
-  onContainerStop?: boolean;
-  onContainerExit?: boolean;
-  onContainerCreate?: boolean;
-  onContainerKill?: boolean;
-  handleContainerDie?: boolean;
-  onContainerDestroy?: boolean;
-  onContainerPause?: boolean;
-  onContainerUnpause?: boolean;
-  onContainerRestart?: boolean;
-  onContainerUpdate?: boolean;
-  onContainerRename?: boolean;
-  onContainerHealthStatus?: boolean;
-  onHostUnreachable?: boolean;
-  onHostReachableAgain?: boolean;
+  version?: string;
+  usedHooks: {
+    onContainerStart?: boolean;
+    onContainerStop?: boolean;
+    onContainerExit?: boolean;
+    onContainerCreate?: boolean;
+    onContainerKill?: boolean;
+    handleContainerDie?: boolean;
+    onContainerDestroy?: boolean;
+    onContainerPause?: boolean;
+    onContainerUnpause?: boolean;
+    onContainerRestart?: boolean;
+    onContainerUpdate?: boolean;
+    onContainerRename?: boolean;
+    onContainerHealthStatus?: boolean;
+    onHostUnreachable?: boolean;
+    onHostReachableAgain?: boolean;
+  };
 }
 
 interface Plugin {
