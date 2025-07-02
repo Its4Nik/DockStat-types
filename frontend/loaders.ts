@@ -1,25 +1,10 @@
+import type { stacks_config } from "../database";
 import type { ContainerInfo, HostStats } from "../docker";
+import type { PluginInfo } from "../plugin";
 
-interface DefaultLoader {
-  containers: {
-    total: number;
-    running: number;
-    stopped: number;
-    raw: ContainerInfo[];
-  };
-  hosts: {
-    total: number;
-    raw: HostStats[];
-  };
-  stacks: {
-    total: number;
-    names: string[];
-  };
-  plugins: {
-    total: number;
-    active: number;
-    inactive: number;
-  };
+export interface DefaultLoader {
+  containers: Promise<ContainerInfo[]>;
+  hosts: Promise<HostStats[]>;
+  stacks: stacks_config[];
+  plugins: PluginInfo[];
 }
-
-export type { DefaultLoader };
