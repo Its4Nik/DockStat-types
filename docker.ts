@@ -1,6 +1,5 @@
 import type { ContainerStats } from "dockerode";
 import type Docker from "dockerode";
-import type { log_message } from "./database";
 
 interface DockerHost {
   name: string;
