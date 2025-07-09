@@ -1,5 +1,12 @@
 //import { ComposeSpec } from "./docker-compose";
 
+type Theme = {
+  name: string;
+  creator: string;
+  tags: string[];
+  vars: string;
+};
+
 interface config {
   keep_data_for: number;
   fetching_interval: number;
@@ -32,4 +39,4 @@ interface container_stats {
   cpu_usage: number;
   memory_usage: number;
 }
-export type { container_stats, config, stacks_config, log_message };
+export type { Theme, container_stats, config, stacks_config, log_message };
