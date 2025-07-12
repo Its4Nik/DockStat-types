@@ -8,7 +8,7 @@ export type TemplateEntry = {
 
 export type ThemeEntry = {
   name: string; // Directory name (used as theme name)
-  icon: string; // URL to the icon or empty string
+  icon: string; // HEX color of the accent
   themeVersion: string; // Extracted from @version in CSS
   cssFile: string; // URL to the theme.css
   owner: string; // Extracted from @owner in CSS
