@@ -1,3 +1,5 @@
+import type { ThemeOptions } from "./database";
+
 export type TemplateEntry = {
   name: string;
   icon: string; // URL to the icon (svg/png) or empty string
@@ -9,9 +11,10 @@ export type TemplateEntry = {
 export type ThemeEntry = {
   name: string; // Directory name (used as theme name)
   icon: string; // HEX color of the accent
-  themeVersion: string; // Extracted from @version in CSS
+  options: ThemeOptions;
   cssFile: string; // URL to the theme.css
   owner: string; // Extracted from @owner in CSS
+  tags: string[];
 };
 
 export type IndexJson = {
